@@ -31,13 +31,13 @@ ALLOWED_HOSTS = ['127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'main',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'homepage'
 ]
 
 MIDDLEWARE = [
@@ -74,21 +74,22 @@ WSGI_APPLICATION = 'bedside.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
 DATABASES = {
-    'default': {
-        'NAME': 'test',
-        'ENGINE': 'mysql.connector.django',
-        'HOST': '127.0.0.1',
-        'PORT': 3306,
-        'USER': 'root',
-        'PASSWORD': 'Stagvtol56',
-        'OPTIONS': {
-        'autocommit': True,
-        'use_oure': True,
-        # 'init_command': "SET foo='bar';"
-        }
+    # 'default': {
+    #     'NAME': 'BedSide',
+    #     'ENGINE': 'mysql.connector.django',
+    #     'HOST': '127.0.0.1',
+    #     'PORT': 3306,
+    #     'USER': 'root',
+    #     'PASSWORD': 'Stagvtol56',
+    #     },
+        "default": {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR/ 'db.sqlite3',
     }
-}
+    }
+
 
 
 # Password validation
